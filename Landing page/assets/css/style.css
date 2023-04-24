@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f5f5f5;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/*--------------------------------------------- Aquí irá todo lo relacionado al header ------------------------------------------------------*/
+
+header{
+    background-image: url("../img/bg-header.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 50vh;
+    padding: 2em 0 2em 2em;
+    min-width: 1920px;
+}
+
+header h1{
+    display: inline-block;
+    color: #fff;
+    font-size: 2.5rem;
+    position: relative;
+    top: 0.1em;
+}
+
+.titulo-header{
+    color: cyan;
+}
+
+.buscador{
+    display: inline-block;
+    width: 60vw;
+    margin: 0 0 0.9em 1em;
+    border: 1px outset #fff;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    padding: 0.3em 0.3em;
+}
+
+.icono-buscar{
+    position: relative;
+    top: 0.1em;
+    margin: 0 0 0 -2.2em;
+    padding-left: 0.5em;
+    border-left: 2px solid gray;
+    cursor: pointer;
+}
+
+nav{
+    display: inline-block;
+    margin: 0 0 0 1em;
+}
+
+.lista-navegacion li{
+    display: inline;
+    margin: 0 0.4em;
+}
+
+.lista-navegacion a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.lista-navegacion a:hover{
+    color: aqua;
+}
+
+/*----------------------------Aquí irá la barra de opciones de apartado (Gaming y Streaming, Computación, Componentes, etc...)-------------------------------------- */
+
+.barra-opciones{
+    background-color: #fff;
+    width: 100vw;
+    padding: 1em 0 1em 0;
+    min-width: 1920px;
+}
+
+.lista-opciones li{
+    display: inline;
+    font-size: 1.3rem;
+    margin: auto 2em;
+}
+
+.lista-opciones a{
+    color: #000;
+    text-decoration: none;
+}
+
+.lista-opciones a:hover{
+    color: steelblue;
+}
+
+/*------------------------------------Aquí irá la primera sección que corresponde al Slider-----------------------------------------------------*/
+
+.seccion-productos{
+    position: relative;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.seccion-productos img{
+    max-width: 100%;
+}
+
+.contenedor-slider{
+    display: flex;
+    transform: translate3d(0, 0, 0,);
+    transition: all 600ms;
+    animation-name: autoplay;
+    animation-duration: 30s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.contenedor-imagenes-slider{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+
+.contenedor-imagenes-chicas{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.imagenes-item{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 120s;
+}
+
+.imagenes-item:hover{
+    transform: scale(2);
+}
+
+
+.imagenes-item img{
+    display: inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 600ms;
+}
+
+.imagenes-item:hover img{
+    opacity: 1;
+    transform: scale(1);
+}
+
+input[id="1"]:checked ~ .contenedor-slider{
+    animation: none;
+    transform: translate3d(0, 0, 0);
+}
+
+input[id="1"]:checked ~ .contenedor-imagenes-chicas .imagenes-item[for="1"]{
+    background: #fff;
+}
+
+input[id="2"]:checked ~ .contenedor-slider{
+    animation: none;
+    transform: translate3d(calc(-100% * 1), 0, 0);
+}
+
+input[id="2"]:checked ~ .contenedor-imagenes-chicas .imagenes-item[for="2"]{
+    background: #fff;
+}
+
+input[id="3"]:checked ~ .contenedor-slider{
+    animation: none;
+    transform: translate3d(calc(-100% * 2), 0, 0);
+}
+
+input[id="3"]:checked ~ .contenedor-imagenes-chicas .imagenes-item[for="3"]{
+    background: #fff;
+}
+
+input[id="4"]:checked ~ .contenedor-slider{
+    animation: none;
+    transform: translate3d(calc(-100% * 3), 0, 0);
+}
+
+input[id="4"]:checked ~ .contenedor-imagenes-chicas .imagenes-item[for="4"]{
+    background: #fff;
+}
+
+input[id="5"]:checked ~ .contenedor-slider{
+    animation: none;
+    transform: translate3d(calc(-100% * 4), 0, 0);
+}
+
+input[id="5"]:checked ~ .contenedor-imagenes-chicas .imagenes-item[for="5"]{
+    background: #fff;
+}
+
+@keyframes autoplay{
+    20%{
+        transform: translate3d(calc(-100% * 0), 0, 0);
+    }
+    40%{
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+    60%{
+        transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+    80%{
+        transform: translate3d(calc(-100% * 3), 0, 0);
+    }
+    100%{
+        transform: translate3d(calc(-100% * 4), 0, 0);
+    }
+}
+
+
+/*-------------------------------------------------------Aquí irá la sección de productos 2 (ofertas)-----------------------------------------------------------------*/
+
+.seccion-productos-2{
+    width: 100vw;
+}
+
+.titulo-ofertas{
+    width: 70vw;
+    margin: 0 auto;
+}
+
+.titulo-ofertas{
+    text-align: center;
+}
+
+.titulo-ofertas h3{
+    padding: 2em 0;
+    font-size: 1.5rem;
+    color: rgb(68, 27, 152);
+}
+
+.titulo-ofertas span{
+    margin-left: 0.3em;
+    padding-bottom: 0.3em;
+    border-bottom: 4px solid rgb(41, 214, 214);
+}
+
+.productos-ofertas{
+    width: 70vw;
+    height: auto;
+    margin: 0 auto;
+    min-width: 1450px;
+}
+
+/*----------------------------------------------------Aquí irán las tarjetas con productos-----------------------------------------------------------*/
+
+.tarjeta-oferta{
+    display: inline-block;
+    background-color: #fff;
+    width: 19%;
+    height: 56vh;
+    margin-left: 0.5em;
+}
+
+.parrafo-oferta-1{
+    background-color: rgb(251, 233, 251);
+    color: rgb(152, 27, 152);
+    display: inline;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-left: 8em;
+    padding: 0.6em 0.4em 0.4em 0.4em;
+}
+
+.parrafo-oferta-2{
+    background-color: rgb(233, 239, 251);
+    color: rgb(68, 27, 152);
+    display: inline;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-left: 11em;
+    padding: 0.6em 0.4em 0.4em 0.4em;
+}
+
+.h4-nombre-producto{
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 2em 0 1em 0.5em;
+}
+
+.parrafo-descripcion-producto{
+    padding-left: 0.5em;
+    font-weight: 100;
+    text-align: left;
+    color: rgb(38, 38, 38);
+}
+
+.contenedor-parrafo-descripcion-producto{
+    height: 80px;
+}
+
+.descuento-producto{
+    display: inline-block;
+    margin: 2em 0 0 0.6em;
+    padding: 0.2em;
+    background-color: rgb(148, 235, 235);
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: rgb(68, 27, 152);
+}
+
+.descuento-tachado{
+    display: inline-block;
+    text-decoration: line-through;
+    color: rgb(115, 115, 115);
+}
+
+.precio-producto{
+    display: block;
+    margin: 0.7em 0 0 0.4em;
+    font-size: 1.5rem;
+    color: rgb(68, 27, 152);
+}
+
+.medio-de-pago{
+    display: block;
+    margin: 0.3em 0 0 0.6em;
+    color: rgb(68, 27, 152);
+}
+
+/*----------------------------------------------------------------Aquí irá mi footer---------------------------------------------------------------------------*/
+
+footer{
+    width: 100vw;
+    height: 40vh;
+    background-color: rgb(29, 11, 65);
+    color: rgb(217, 217, 217);
+    margin: 2em 0 0 0;
+    min-width: 1920px;
+}
+
+.contenedor-footer{
+    width: 70vw;
+    height: 30vh;
+    margin: 0 auto;
+    border-bottom: 0.5px solid grey;
+}
+
+.contenedores-footer{
+    display: inline-block;
+    padding-top: 1.2em;
+    text-align: left;
+    width: 23vw;
+    vertical-align: top;
+}
+
+.contenedores-footer h2{
+    padding: 0.2em 0 0.2em 0.3em;
+    border-left: 4px solid rgb(41, 214, 214);
+    font-size: 1.2rem;
+}
+
+.listas-footer{
+    margin: 1em 0 0 0;
+    list-style: none;
+}
+
+.listas-footer li{
+    margin-top: 0.3em;
+}
+
+.listas-footer a{
+    text-decoration: none;
+    color: rgb(217, 217, 217);
+}
+
+.listas-footer a:hover{
+    text-decoration: underline;
+}
