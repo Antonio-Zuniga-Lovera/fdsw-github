@@ -16,57 +16,37 @@
         integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="assets/css/portfolio.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand m-0" href="#">
-                <h1 class="h4 m-0">Antonio Zúñiga</h1>
-            </a>
-            <button class="navbar-toggler" data-bs-target="#navbarSupportedContent" type="button" data-bs-toggle="collapse"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Acerca de mi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Trabajos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li>
-
-                </ul>
-
-            </div>
+    <nav class="navbar navbar-expand-lg bg-dark d-flex justify-content-between fixed-top">
+        <div class="logo ms-5">
+            <h2>A<span>Z</span></h2>
         </div>
+            
+        <nav class="navegacion mt-3">
+            <ul>
+                <li><a href="#" class="item-nav">Home</a></li>
+                <li><a href="#" class="item-nav">About me</a></li>
+                <li><a href="#" class="item-nav">Portfolio</a></li>
+                <li><a href="#" class="item-nav">Contact</a></li>
+            </ul>
+        </nav>
     </nav>
-
     <header id="Hero-Section" class="text-light text-end py-5 mt-5">
-        <div class="container">
-            <div class="ms-auto col-12 col-md-7 ">
-                <h1 class="display-1 fw-bold my-5">
-                    Comidas del fin <br> del mundo
-                </h1>
-                <p class="my-5">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, accusamus iusto quibusdam
-                    dignissimos labore sequi. Cupiditate reiciendis eius dolore, illum adipisci harum voluptas iste
-                    mollitia inventore provident labore voluptatum nemo.
-                </p>
-                <div class="mb-5 pb-5">
-                    <button class="btn btn-lg btn-outline-info text-light me-4">Trabajos</button>
-                    <button class="btn btn-lg btn-info text-light">Contacto</button>
-                </div>
+        <section class="d-flex justify-content-around container pt-5">
+            <div class="titulo">
+                <h2 class="titulo-presentacion mt-5"><span id="span-efecto">I'm<span>Antonio</span>Zúñiga</span></h2>
+                <p class="ms-2">Fullstack web developer / Data Science / Movil developer</p>
             </div>
-        </div>
+            <div class="foto-perfil">
+                <img src="assets/img/fullstack-developer.svg" alt="foto de perfil desarrollador fullstack">
+            </div>
+        </section>
     </header>
 
-
-    <section id="Acerca-de-mi" class="container text-center my-5">
+    <section id="Acerca-de-mi" class="container text-center my-5 text-white">
 
 
         <h2 class="display-3 fw-bold my-4">Acerca de mi</h2>

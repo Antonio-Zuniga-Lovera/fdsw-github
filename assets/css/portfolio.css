@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Rubik:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #191c32;
+    font-family: 'Noto Serif', serif;
+    font-family: 'Rubik', sans-serif;
+}
+
+/*---------------------------------AQUÍ IRÁ TODO LO RELACIONADO AL HEADER *----------------------------------*/
+
+header {
+    padding: 1em 0 1em 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: inline-block;
+    width: 3vw;
+}
+
+.logo h2{
+    color: #fff;
+}
+
+.logo span {
+    color: aqua;
+}
+
+.navegacion {
+    display: inline-block;
+    padding-right: 1em;
+}
+
+.navegacion a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.navegacion a:hover {
+    color: aqua;
+}
+
+
+.navegacion li {
+    display: inline;
+    margin-right: 1.2em;
+}
+
+.item-nav {
+    margin-right: 1em;
+}
+
+/*---------------------------------------AQUÍ IRA TODO LO RELACIONADO AL MAIN--------------------------------*/
+
+/*Está será la sección de presentación*/
+
+
+.titulo {
+    display: inline-block;
+    width: 470px;
+}
+
+.titulo-presentacion{
+    display: inline-block;
+    top: 1em;
+    bottom: 4em;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.titulo-presentacion span{
+    margin: 0 0.2em;
+    color: cyan;
+}
+
+#span-efecto {
+    display: block;
+    color: #fff;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 14ch;
+
+    animation: typing 1.5s steps(12), blink 0.4s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing{
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+.titulo p {
+    color: gray;
+}
+
+.foto-perfil img {
+    width: 600px;
+    height: 300px;
+    border: 7px inset aqua;
+    border-radius: 18px;
+}
