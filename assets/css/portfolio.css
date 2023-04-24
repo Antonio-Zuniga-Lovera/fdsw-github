@@ -112,3 +112,12 @@ header {
     border: 7px inset aqua;
     border-radius: 18px;
 }
+
+.ver-mas{
+    text-decoration: none;
+    color: cyan;
+}
+
+.ver-mas:hover{
+    color: #000;
+}
